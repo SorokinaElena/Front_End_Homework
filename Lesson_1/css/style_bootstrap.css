@@ -1,0 +1,11 @@
+.submit {
+    background: red;
+}
+.red_btn {
+    background: red;
+    border-color: blueviolet;
+}
+
+.form-control .me-2 .one {
+    margin-top: 5rem;
+}
