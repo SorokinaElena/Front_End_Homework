@@ -6,7 +6,7 @@ function getGreeting (string) {
 }
 console.log(getGreeting('Elena'));
 
-let greeting = (string) => `Dear ${string}, welcome.`;
+let greeting = (string) => `Dear ${string}, welcome.`; // один аргумент можем писать без скобок ()
 console.log(getGreeting('Elena'));
 
 // 2. Напишите функцию, которая принимает в качестве аргументов два значения: имя и возраст. Если переданный возраст меньше 18, то функция возвращает сообщение в формате: Dear ИМЯ, you are younger than 18. Если возраст больше или равен 18, то функция возвращает сообщение в формате: Dear ИМЯ, you are adult. Запишите функцию в двух форматах (function declaration и arrow function).
@@ -28,6 +28,10 @@ let greeting_1 = (name, age) => {
     }
 }
     console.log(greeting_1('Elena', 18));
+
+// тернарный оператор: условие1 ? действие при условие1 верно :  действие при условие1 неверно
+    const greeting_1_ternary = (name, age) => age < 18 ? `Dear ${name}, you are younger than 18` : `Dear ${name}, you are adult`;
+    console.log(greeting_1_ternary('Elena', 18));
 
 // Second level: 3. Напишите функцию, которая принимает два числовых аргумента и возвращает результат их умножения. Значение второго аргумента должно быть указано по умолчанию 2. Запишите функцию в двух форматах (function declaration и arrow function).
 
