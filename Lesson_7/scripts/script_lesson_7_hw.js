@@ -31,7 +31,7 @@ console.log(new_array);
 let get_new_array1 = (array) => {
     let new_array = [];
     for (let i = 0; i < array.length; i++) {
-        if (array[i] % 2 === 0) {
+        if (array[i] % 2 === 0 && array[i] !== 0) {
             new_array.push(array[i]);
         }
     }
@@ -41,7 +41,7 @@ console.log(get_new_array1(array));
 
 let new_array1 = [];
 array.forEach (elem => {
-    if (elem % 2 === 0) {
+    if (elem % 2 === 0 && elem !== 0) {
         new_array1.push(elem);
     }
 });
@@ -74,7 +74,7 @@ let get_new_array4 = (array) => {
     let new_array = [];
     for (let i = 0; i < array.length; i++) {
         if (array[i] > 100) {
-            new_array.push('> 100')
+            new_array.push('> 100');
         } else if (array[i] === 100) {
             new_array.push('= 100');
         } else {
