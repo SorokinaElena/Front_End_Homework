@@ -11,11 +11,14 @@ console.log(arr);
 // arr.pop();
 // console.log(arr);
 
-let i = arr.length;
-let j = i - 2;
-for(let idx = i; idx > j; idx--) {
-    arr.pop();
-};
+// let i = arr.length;
+// let j = i - 2;
+// for(let idx = i; idx > j; idx--) {
+//     arr.pop();
+// };
+
+arr.length = arr.length - 2; // удаление двух последних элементов из массива!!!!!! 
+
 console.log(arr);
 
 // 2. Сформируйте массив из положительных чисел меньше 50. Найдите сумму всех положительных чисел меньше 50.
@@ -32,12 +35,14 @@ console.log(sum_positive_numbers_3);
 
 // 3. Сформируйте массив, в котором положительные числа на строку '+', а отрицательные числа - на '-'
 console.log(arr);
-let arr_str = arr.map(elem => {
-    if(elem >= 0) {
-        return elem = '+';
-    } else {
-        return elem = '-';
-    }
-}
-);
+// let arr_str = arr.map(elem => {
+//     if(elem >= 0) {
+//         return elem = '+';
+//     } else {
+//         return elem = '-';
+//     }
+// }
+// );
+
+let arr_str = arr.map(elem => elem >=0 ? '+' : '-');
 console.log(arr_str);
