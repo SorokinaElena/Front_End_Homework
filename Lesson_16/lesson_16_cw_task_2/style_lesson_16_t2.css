@@ -30,3 +30,9 @@
     width: 200px;
     background-color: beige; 
 }
+
+.photo {
+    width: 360px;
+    margin: 10px;
+    object-fit: cover;
+}
