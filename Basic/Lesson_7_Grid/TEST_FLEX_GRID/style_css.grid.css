@@ -1,0 +1,160 @@
+* {
+padding: 0;
+margin: 0;
+}
+
+/* html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+} */
+
+/* .grid_item {
+    border: 1px solid black;
+    padding: 20px; */
+    /* height: 100px; */
+    /* Выравнивание текста по горизнтали: */
+    /* text-align: center; */
+
+
+    /* display: flex;
+    flex-direction: row; */
+    /* Отцентровать элементы - первое свойство применяется к основной оси: */
+    /* выстраивает элементы вдоль основной оси внутри контейнера - по умолчанию по горизонтали */
+    /* justify-content:space-around; 
+    align-items:flex-end;
+} */
+    /* justify-items - сколько места занимают элементы - стреч по умолчанию - занимает все место в ячейке, еще есть center start end */
+    /* https://html5.by/blog/flexbox/ */
+    /* https://gridbyexample.com/examples/ */
+    /* https://developer.mozilla.org/ru/docs/Web/CSS/CSSGridLayout */
+
+/* 
+
+flex-direction - выбор направления основной оси
+justify-content - выравнивание элементов вдоль основной оси
+align-items - выравнивание перпендикулярно основной оси
+flex-wrap - перенос элементов на следующую строку
+
+flex-wrap: nowrap;
+*/
+
+
+/* .grid_container {
+    display: grid; */
+    /* Layout - определение сетки: */
+    /* задаем количество колонок с указанием их ширины: */
+    /* grid-template-columns: 200px 100px 200px; */
+    /* grid-template-columns: 50% 25% 25%;  */
+    /* grid-template-columns: 25% 25% 25% 25%;  */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-columns: 1fr 1fr 2fr; */
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* grid-template-columns: 100px 1fr 2fr 200px; */
+    /* grid-template-columns: 100px repeat(2, 1fr) 200px; */
+
+    /* Высота строк: */
+    /* grid-template-rows: 100px 300px; */
+    /* Создаем три строки в явной сетке: */
+    /* grid-template-rows: repeat(3, 300px); */
+    /* Здесь только 2 строки попадают в явную сетку - размер 300px применится только к двум первым строкам */
+    /* grid-template-rows: repeat(2, 300px); */
+    /* grid-template-rows: repeat(3, 1fr); */
+
+     
+/* fr - fraction - единица измерения - работает только внутри гридов - часть от экрана */
+
+    /* Короткая запись: */
+    /* grid-template: строки / колонки; */
+    /* grid-template: repeat(2, 300px) / repeat(3, 1fr);
+}  */
+
+/* Имена областей: */
+
+/* Вариант 1 записи: */
+ /* .grid_container_2 {
+    display: grid;
+    grid-template-columns: 200px 1fr; */
+    /* Расчерчиваем сетку:
+    grid-template-areas: 
+    'header header'
+    'sidebar content'
+    'footer footer'; */
+
+    /* При заданных 100% для body, html: */
+    /* height: 100%; */
+
+    /* height: 100vh;
+    grid-template-rows: 70px 1fr 70px;
+  } */
+  
+  /* Вариант 2 записи - все три свойства в одном: */
+  .grid_container_2 {
+    height: 100vh;
+    display: grid;
+    grid-template: 
+    [start] 'header header' 70px [row2]
+    [row2] 'sidebar content' 1fr [row3]
+    [row3] 'footer footer' 70px [row-end] / 200px 1fr;
+
+    /* grid-column-gap: 10px;
+    grid-row-gap: 10px; */
+    grid-gap: 10px
+  }    
+    
+  .grid_header,
+  .grid_sidebar,
+  .grid_content,
+  .grid_footer {
+    border: 1px solid black;
+    padding: 10px;
+  }
+  
+  .grid_header {
+    grid-area: header;
+  }
+  
+  .grid_sidebar {
+    grid-area: sidebar;
+  }
+  
+  .grid_content {
+    grid-area: content;
+  }
+  
+  .grid_footer {
+    grid-area: footer;
+  }
+
+  
+  /* ? как двигать отдельные элементы внутри сетки:
+  https://cssgridgarden.com/#ru
+  https://flexboxfroggy.com/#lv 
+  https://codepip.com - игры на grid flex */
+
+/* ======================================================================= */
+  .item {
+    background-color: aqua;
+  }
+  .item:hover {
+    background-color: yellowgreen;
+  }
+
+  .grid_content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Открытие ссылки в новом окне:
+  target="_blank"
+  http://htmlbook.ru/faq/kak-otkryt-ssylku-v-novom-okne */
+
+  .img_moon {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+  }
+
+
