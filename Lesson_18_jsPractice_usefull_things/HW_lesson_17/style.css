@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.workers_form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 300px;
+}
+
+.form input {
+    margin: 0 0 10px 0;
+    height: 40px;
+    font-size: 17px;
+}
+
+.btn {
+    height: 40px;
+    font-size: 17px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px); 
+    grid-auto-rows: 150px; 
+    gap: 20px;
+    justify-content: center;
+    
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+    width: 300px;
+    height: 150px;
+    border: 1px solid black;
+    font-size: 25px;
+}
+
+.card div {
+    padding: 10px;
+}

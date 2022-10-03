@@ -32,3 +32,4 @@ change_mode.addEventListener('click', () => {
 
     document.body.style.backgroundColor = backgroundColor;
 });
+
