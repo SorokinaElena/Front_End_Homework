@@ -4,11 +4,11 @@
 const wrapper = document.querySelector('.wrapper');
 
 const photo_wrapper = document.querySelector('.photo_wrapper');
-const button_left = document.querySelector('.button_left');
-const button_right = document.querySelector('.button_right');
-const button = document.querySelector('.button');
+// const button_left = document.querySelector('.button_left');
+// const button_right = document.querySelector('.button_right');
+// const button = document.querySelector('.button');
 // const photo = document.querySelector('.photo');
-
+const [ button_left, button_right ] = document.querySelectorAll('.trigger button');
 
 const photos_array = [];
 
@@ -57,12 +57,47 @@ photo_wrapper.append(photo);
 
 let photoIndex = 0;
 
+// Вариант мой:
+// button_right.addEventListener('click', (event) => {
+//     if(photoIndex < photos_array.length - 1)
+//         photo.src = photos_array[++photoIndex % photos_array.length]
+// });
+// button_left.addEventListener('click', (event) => {
+//     if(photoIndex > 0)
+//     photo.src = photos_array[--photoIndex % photos_array.length]
+// });
+
+// Вариант преподавателя:
 button_right.addEventListener('click', (event) => {
-    if(photoIndex < photos_array.length - 1)
-        photo.src = photos_array[++photoIndex % photos_array.length]
+    photo.src = photos_array[++photoIndex % photos_array.length]
 });
+
 button_left.addEventListener('click', (event) => {
-    if(photoIndex > 0)
+    if(photoIndex === 0) {
+        photoIndex = photos_array.length;
+    }
     photo.src = photos_array[--photoIndex % photos_array.length]
 });
+
+// a++ - сначала возвращает значение, а потом увеличивает его на единицу
+// ++a - сначала увеличивает на единицу, а потом возвращает
+
+
+// Деструктуризация:
+/* const user = {
+  firstname: 'Anton',
+  lastname: 'Ivanov',
+  age: 38
+}
+
+const showMessage = obj => {
+  console.log(`Hello ${obj.firstname}. You are ${obj.age} years old!`)
+}
+
+const showMessage_1 = ({ firstname, age }) => {
+  console.log(`Hello ${firstname}. You are ${age} years old!`)
+}
+
+showMessage(user);
+showMessage_1(user); */
 
